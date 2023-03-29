@@ -1,0 +1,270 @@
+/* reset */
+/* :root {
+    --clr-main: #4b33a8;
+    --clr-main-light: #785ce9;
+    --clr-white: #ececec;
+    --clr-gray: #e2e2e2;
+    --clr-red: #961818;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6, p, input, textarea, ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    background-color: rgb(238, 151, 151);
+}
+
+aside {
+    padding: 2rem;
+    padding-right: 0;
+    color: white;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    font-weight: 600;
+}
+.boton-menu {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 1rem;
+    font-size: .85rem;
+    position: relative;
+    width: 100%;
+
+}
+
+.boton-menu.active {
+    background-color: white;
+    color: black;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.boton-menu.active::before{
+content: '';
+position: absolute;
+width: 1rem;
+height: 2rem;
+bottom: 100%;
+right: 0;
+border-bottom-right-radius: 0.5rem;
+background-color:transparent;
+box-shadow: 0 1rem 0 white;
+}
+.boton-menu.active::after{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 2rem;
+    top: 100%;
+    right: 0;
+    border-top-right-radius: 0.5rem;
+    background-color:transparent;
+    box-shadow: 0 -1rem 0 white;
+    }
+    
+.boton-carrito {
+    margin-top: 2rem;
+}
+.numerito{
+    background-color: white;
+    color: black;
+    padding: 0.15rem .25rem;
+    border-radius: .25rem;
+}
+
+.boton-carrito.active .numerito {
+    background-color: black;
+    color: white;
+}
+
+.texto-footer {
+    color: rgb(252, 232, 232);
+    font-size: 0.85rem;
+}
+
+main {
+    background-color: whitesmoke;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.titulo-principal {
+    color:rgb(238, 151, 151);
+    margin-bottom: 2rem;
+}
+
+.contenedor-artistas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+.artista-imagen {
+    max-width: 100%;
+    border-radius: 1rem;
+}
+
+.artista-detalles {
+    background-color:  rgb(238, 151, 151);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-top: -2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+.artista-titulo {
+    font-size: 1rem;
+}
+
+.artista-agregar {
+    border: 0;
+    background-color: whitesmoke;
+    padding: .4rem;
+    text-transform: uppercase;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: background-color .2s, color .2s;
+}
+
+.artista-agregar:hover {
+    background-color: rgb(211, 200, 200);
+}
+
+/* carrito*/
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5;
+}
+.carrito-vacio,
+.carrito-comprado {
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+}
+
+.carrito-productos {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+}
+
+.carrito-producto {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: rgb(209, 204, 204);
+padding: .5rem;
+padding-right: 1.5rem;
+border-radius: 1rem;
+
+}
+
+.carrito-producto-imagen {
+    width: 5rem;
+    border-radius: 1rem;
+}
+
+.carrito-producto small {
+    font-size: 0.75rem;
+
+}
+
+
+.carrito-producto-eliminar {
+    border: 0;
+    background-color: transparent;
+    color: red;
+    cursor: pointer;
+}
+
+.carrito-acciones {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.carrito-acciones-vaciar {
+    border: 0;
+    background-color: rgb(209, 204, 204);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.carrito-acciones-derecha {
+    display: flex;  
+}
+
+.carrito-acciones-total {
+    display: flex;
+    border: 0;
+    background-color: rgb(209, 204, 204);
+    padding: 1rem;
+    text-transform: uppercase;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    gap: 1rem;
+    
+}
+
+.carrito-acciones-comprar {
+    border: 0;
+    background-color:  rgb(238, 151, 151);
+    padding: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    
+}
+
+.disabled {
+    display: none;
+}

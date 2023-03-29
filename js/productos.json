@@ -1,0 +1,63 @@
+
+  [
+  {
+    "id":"concierto-01",
+   "titulo": "duki",
+    "imagen": "/img/duki.jpg",
+   "categoria": {
+        "nombre":"cordoba",
+        "id": "cordoba"
+    },
+    "precio": 4500
+  },
+  {
+    "id":"concierto-02",
+    "titulo": "dillom",
+   "imagen": "/img/dillom.jpg",
+   "categoria": {
+        "nombre":"cordoba",
+        "id": "cordoba"
+    },
+    "precio": 5000
+  },
+  {
+    "id":"concierto-03",
+    "titulo": "feid",
+    "imagen": "/img/feid.jpg",
+    "categoria": {
+        "nombre":"buenos-aires",
+        "id": "bs-as"
+    },
+   "precio": 5500
+  },
+{
+    "id":"concierto-04",
+    "titulo": "lit-killah",
+    "imagen": "/img/litkillah.jpg",
+    "categoria": {
+        "nombre":"buenos-aires",
+        "id": "bs-as"
+    },
+    "precio": 6000
+  },
+  {
+    "id":"concierto-05",
+    "titulo": "relsb",
+    "imagen": "/img/relsb.jpg",
+    "categoria": {
+       " nombre":"mendoza",
+        "id": "mendoza"
+    },
+    "precio": 6500
+  },
+{
+    "id":"concierto-06",
+    "titulo": "tiago",
+    "imagen": "/img/Tiago.jpg",
+   " categoria": {
+       " nombre":"mendoza",
+        "id": "mendoza"
+    },
+    "precio": 7000
+  }
+]
